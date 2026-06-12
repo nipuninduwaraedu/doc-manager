@@ -10,8 +10,12 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "concurrently": "^9.2.1",
+    "electron-builder": "^26.15.3",
     "react": "^19.2.6",
-    "react-dom": "^19.2.6"
+    "react-dom": "^19.2.6",
+    "react-dropzone": "^15.0.0",
+    "wait-on": "^9.0.10"
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",
