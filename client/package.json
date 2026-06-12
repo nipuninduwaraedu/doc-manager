@@ -3,11 +3,12 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "scripts": {
-    "dev": "vite",
+   "scripts": {
+    "dev": "concurrently \"npm run vite\" \"npm run electron\"",
+    "vite": "vite",
+    "electron": "wait-on http://localhost:5173 && electron electron/main.js",
     "build": "vite build",
-    "lint": "eslint .",
-    "preview": "vite preview"
+    "dist": "electron-builder"
   },
   "dependencies": {
     "concurrently": "^9.2.1",
