@@ -1,9 +1,9 @@
 {
-  "name": "client",
-  "private": true,
-  "version": "0.0.0",
+  "name": "doc-manager",
+  "version": "1.0.0",
+  "main": "electron/main.js",
   "type": "module",
-   "scripts": {
+  "scripts": {
     "dev": "concurrently \"npm run vite\" \"npm run electron\"",
     "vite": "vite",
     "electron": "wait-on http://localhost:5173 && electron electron/main.js",
@@ -28,5 +28,13 @@
     "eslint-plugin-react-refresh": "^0.5.2",
     "globals": "^17.6.0",
     "vite": "^8.0.12"
+  },
+  "build": {
+    "appId": "com.docmanager.app",
+    "productName": "DocManager",
+    "win": {
+      "target": "nsis",
+      "icon": "electron/icon.ico"
+    }
   }
 }
