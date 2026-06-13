@@ -1,0 +1,17 @@
+body {
+  font-family: Arial;
+  margin: 0;
+}
+
+.dropzone {
+  border: 2px dashed gray;
+  padding: 30px;
+  margin: 20px;
+  cursor: pointer;
+}
+
+.file {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+  cursor: pointer;
+}
