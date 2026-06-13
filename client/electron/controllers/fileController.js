@@ -5,10 +5,10 @@ export function uploadFile(file) {
   return saveFile(file);
 }
 
-export function fetchFile() {
-  return getFiles(file);
+export function fetchFiles() {
+  return getFiles();
 }
 
 export function openFile(filepath) {
-  shell.openPath(filepath);
+  return shell.openPath(filepath);
 }

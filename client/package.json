@@ -5,10 +5,10 @@
   "type": "module",
   "scripts": {
     "dev": "concurrently \"npm run vite\" \"npm run electron\"",
-    "vite": "vite",
+    "vite": "vite --port 5173",
     "electron": "wait-on http://localhost:5173 && electron electron/main.js",
     "build": "vite build",
-    "dist": "electron-builder"
+    "dist": "npm run build && electron-builder"
   },
   "dependencies": {
     "concurrently": "^9.2.1",
@@ -23,6 +23,7 @@
     "@types/react": "^19.2.14",
     "@types/react-dom": "^19.2.3",
     "@vitejs/plugin-react": "^6.0.1",
+    "electron": "^26.6.0",
     "eslint": "^10.3.0",
     "eslint-plugin-react-hooks": "^7.1.1",
     "eslint-plugin-react-refresh": "^0.5.2",
@@ -32,6 +33,11 @@
   "build": {
     "appId": "com.docmanager.app",
     "productName": "DocManager",
+    "files": [
+      "dist/**/*",
+      "electron/**/*",
+      "package.json"
+    ],
     "win": {
       "target": "nsis",
       "icon": "electron/icon.ico"

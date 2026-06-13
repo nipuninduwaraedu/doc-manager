@@ -1,8 +1,9 @@
+import { app } from "electron";
 import fs from "fs";
 import path from "path";
 import db from "../database/db.js";
 
-const uploadDir = path.join(process.cwd(), "electron/storage/uploads");
+const uploadDir = path.join(app.getPath("userData"), "uploads");
 
 if (!fs.existsSync(uploadDir)) {
   fs.mkdirSync(uploadDir, { recursive: true });
