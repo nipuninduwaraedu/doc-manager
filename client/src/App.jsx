@@ -1,13 +1,6 @@
-import { useState } from 'react'
+import Home from "./pages/Home";
+import "./styles/global.css";
 
-function App() {
- 
-
-  return (
-    <>
-    
-    </>
-  )
+export default function App() {
+  return <Home />;
 }
-
-export default App
